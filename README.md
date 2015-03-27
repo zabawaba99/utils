@@ -1,4 +1,4 @@
-# Utils
+# Utils [![Build Status](https://travis-ci.org/zabawaba99/utils.svg?branch=master)](https://travis-ci.org/zabawaba99/utils) [![Coverage Status](https://coveralls.io/repos/zabawaba99/utils/badge.svg?branch=master)](https://coveralls.io/r/zabawaba99/utils?branch=master)
 
 ----
 
