@@ -9,3 +9,13 @@ A grouping of utility functions that I have used in many different projects
 ```go
 go get github.com/zabawaba99/utils
 ```
+
+Check the [GoDocs](http://godoc.org/github.com/zabawaba99/utils) for more details
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b new-feature`)
+3. Commit your changes (`git commit -am 'Some cool reflection'`)
+4. Push to the branch (`git push origin new-feature`)
+5. Create new Pull Request
