@@ -1,6 +1,9 @@
 package utils
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 // Time gets the difference between the current time
 // and the given start time and then logs the difference
@@ -8,5 +11,5 @@ import "time"
 //		defer Time(time.Now(), "some-code")
 func Time(start time.Time, name string) {
 	totalTime := time.Now().Sub(start)
-	Log.Printf("%s took %s", name, totalTime)
+	Writer.Write([]byte(fmt.Sprintf("%s took %s", name, totalTime)))
 }

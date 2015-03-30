@@ -13,7 +13,7 @@ func TestTime(t *testing.T) {
 	testName := "cool test"
 	Time(time.Now(), testName)
 
-	tl, ok := Log.(*testLogger)
+	tl, ok := Writer.(*testWriter)
 	require.True(t, ok)
 
 	assert.Len(t, tl.entries, 1)

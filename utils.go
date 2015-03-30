@@ -1,18 +1,14 @@
 package utils
 
 import (
-	"log"
+	"io"
 	"os"
 )
 
-// Logger is the object that is used to log
-type Logger interface {
-	Printf(format string, args ...interface{})
-}
-
-// Log is current Logger
-var Log Logger
+// Writer is the default writer for any logging that occurs
+// defaults to os.Stdout
+var Writer io.Writer
 
 func init() {
-	Log = log.New(os.Stdout, "utils: ", log.Ltime)
+	Writer = os.Stdout
 }

@@ -1,23 +1,24 @@
 package utils
 
 import (
-	"fmt"
+	"io"
 	"os"
 	"testing"
 )
 
 // check compilation
-var _ Logger = &testLogger{}
+var _ io.Writer = &testWriter{}
 
-type testLogger struct {
+type testWriter struct {
 	entries []string
 }
 
-func (tl *testLogger) Printf(format string, args ...interface{}) {
-	tl.entries = append(tl.entries, fmt.Sprintf(format, args...))
+func (tl *testWriter) Write(p []byte) (int, error) {
+	tl.entries = append(tl.entries, string(p))
+	return 0, nil
 }
 
 func TestMain(m *testing.M) {
-	Log = &testLogger{}
+	Writer = &testWriter{}
 	os.Exit(m.Run())
 }
