@@ -18,7 +18,9 @@ func (tl *testWriter) Write(p []byte) (int, error) {
 	return 0, nil
 }
 
+var writer = &testWriter{}
+
 func TestMain(m *testing.M) {
-	Writer = &testWriter{}
+	SetWriter(writer, "", 0)
 	os.Exit(m.Run())
 }
