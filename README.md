@@ -19,3 +19,5 @@ Check the [GoDocs](http://godoc.org/github.com/zabawaba99/utils) for more detail
 3. Commit your changes (`git commit -am 'Some cool reflection'`)
 4. Push to the branch (`git push origin new-feature`)
 5. Create new Pull Request
+
+Test
